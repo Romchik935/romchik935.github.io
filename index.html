@@ -2,108 +2,90 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title> Crafted legends </title>
+    <title>Crafted Legends</title>
+
     <style>
         body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #000000;
+            background: #0f172a;
             color: white;
+            font-family: Arial, sans-serif;
             text-align: center;
+            padding-top: 50px;
         }
-        header {
-            padding: 40px 20px;
-            background: linear-gradient(90deg, #2563ed, #f5640a);
-        }
-        section {
-            padding: 40px 20px;
-        }
-        .donates {
-            display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: wrap;
-        }
-        .donate {
+
+        .card {
             background: #1e293b;
+            display: inline-block;
             padding: 20px;
+            margin: 15px;
             border-radius: 10px;
             width: 200px;
         }
-        .donate h3 {
-            margin-top: 0;
-            color: #fc6405;
-        }
+
         button {
-            background: #fc6405;
+            background: #22c55e;
             border: none;
-            padding: 10px 15px;
-            color: black;
-            font-weight: bold;
+            padding: 10px;
+            width: 100%;
+            border-radius: 6px;
             cursor: pointer;
-            border-radius: 5px;
+            font-size: 16px;
         }
+
         button:hover {
-            background: #f5640a;
-        }
-        footer {
-            background: #020617;
-            padding: 20px;
-            font-size: 14px;
-            opacity: 0.7;
+            background: #16a34a;
         }
     </style>
 </head>
+
 <body>
 
-<header>
-    <h1>Crafted legends</h1>
-    <p>Лучший сервер для игры и доната</p>
-</header>
+    <h1>Crafted Legends</h1>
+    <p>Minecraft сервер</p>
 
-<section>
-    <h2>О сервере</h2>
-    <p>
-        Добро пожаловать на наш Minecraft сервер!  
-        Здесь ты найдёшь честную игру, дружелюбную администрацию  
-        и крутые возможности с донатом.
-    </p>
-    <p><b>IP сервера:</b> скоро будет</p>
-</section>
-
-<section>
-    <h2>Донат</h2>
-    <div class="donates">
-        <div class="donate">
-            <h3>VIP</h3>
-            <p>Цена: 99₽</p>
-            <button>Купить</button>
-        </div>
-        <div class="donate">
-            <h3>Админ</h3>
-            <p>Цена: 499₽</p>
-            <button>Купить</button>
-        </div>
-        <div class="donate">
-            <h3>Господин</h3>
-            <p>Цена: 999₽</p>
-            <button>Купить</button>
-        </div>
-        <div class="donate">
-            <h3>Владелец</h3>
-            <p>Цена: 4999₽</p>
-            <button>Купить</button>
-        </div>
+    <div class="card">
+        <h2>VIP</h2>
+        <p>99 ₽</p>
+        <button onclick="buyDonate('VIP', 99)">Купить</button>
     </div>
-</section>
 
-<footer>
-    © 2026 Minecraft Server. Все права защищены.
-</footer>
+    <div class="card">
+        <h2>Админ</h2>
+        <p>499 ₽</p>
+        <button onclick="buyDonate('Админ', 499)">Купить</button>
+    </div>
+
+    <div class="card">
+        <h2>Господин</h2>
+        <p>999 ₽</p>
+        <button onclick="buyDonate('Господин', 999)">Купить</button>
+    </div>
+
+    <div class="card">
+        <h2>Владелец</h2>
+        <p>4999 ₽</p>
+        <button onclick="buyDonate('Владелец', 4999)">Купить</button>
+    </div>
+
+    <script>
+        function buyDonate(name, price) {
+            const nick = prompt("Введите ваш ник в Minecraft:");
+            if (!nick) {
+                alert("Ник не введён");
+                return;
+            }
+
+            alert(
+                "Вы выбрали донат: " + name +
+                "\nЦена: " + price + " ₽" +
+                "\nНик: " + nick
+            );
+        }
+    </script>
 
 </body>
-
 </html>
+
 
 
 

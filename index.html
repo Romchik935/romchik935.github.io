@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Crafted Legends — Minecraft сервер</title>
 
-    <meta name="description" content="Crafted Legends — Minecraft сервер с донатом. Тут ты найдешь новых друзей и добрую администрацию!.">
+    <meta name="description" content="Crafted Legends — Minecraft сервер с донатом. VIP, Админ, Господин, Владелец.">
 
     <style>
         body {
@@ -161,8 +161,41 @@
 </script>
 
 </body>
-</html>
+</html>let selectedPrice = 0;
 
+function openModal(name, price) {
+    selectedDonate = name;
+    selectedPrice = price;
+
+    document.getElementById('modalTitle').innerText = 'Покупка: ' + name;
+    document.getElementById('modalPrice').innerText = 'Цена: ' + price + ' ₽';
+    document.getElementById('modal').style.display = 'flex';
+}
+
+function closeModal() {
+    document.getElementById('modal').style.display = 'none';
+}
+
+function confirmBuy() {
+    const nick = document.getElementById('nickname').value;
+    if (!nick) {
+        alert('Введите ник!');
+        return;
+    }
+
+    alert(
+        'Донат: ' + selectedDonate +
+        '\nЦена: ' + selectedPrice + ' ₽' +
+        '\nНик: ' + nick +
+        '\n\nОплата будет подключена позже'
+    );
+
+    closeModal();
+}
+</script>
+
+</body>
+</html>
 
 
 

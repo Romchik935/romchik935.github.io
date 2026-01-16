@@ -2,89 +2,147 @@
 <html lang="ru">
 <head>
     <meta charset="UTF-8">
-    <title>Crafted Legends</title>
+    <title>Crafted Legends — Minecraft сервер</title>
+
+    <meta name="description" content="Crafted Legends — Minecraft сервер с донатом. VIP, Админ, Господин, Владелец.">
 
     <style>
         body {
-            background: #0f172a;
-            color: white;
+            margin: 0;
             font-family: Arial, sans-serif;
+            background: #0f172a;
+            color: #e5e7eb;
+        }
+
+        header {
+            background: linear-gradient(90deg, #22c55e, #16a34a);
+            padding: 30px;
             text-align: center;
-            padding-top: 50px;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 42px;
+        }
+
+        header p {
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .donates {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
         }
 
         .card {
             background: #1e293b;
-            display: inline-block;
             padding: 20px;
-            margin: 15px;
-            border-radius: 10px;
-            width: 200px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+        }
+
+        .card h2 {
+            margin-top: 0;
+        }
+
+        .price {
+            font-size: 26px;
+            margin: 15px 0;
+            color: #22c55e;
         }
 
         button {
             background: #22c55e;
             border: none;
-            padding: 10px;
+            padding: 12px;
             width: 100%;
-            border-radius: 6px;
-            cursor: pointer;
+            border-radius: 8px;
             font-size: 16px;
+            cursor: pointer;
         }
 
         button:hover {
             background: #16a34a;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            color: #94a3b8;
         }
     </style>
 </head>
 
 <body>
 
+<header>
     <h1>Crafted Legends</h1>
-    <p>Minecraft сервер</p>
+    <p>Minecraft сервер с донатом</p>
+</header>
 
-    <div class="card">
-        <h2>VIP</h2>
-        <p>99 ₽</p>
-        <button onclick="buyDonate('VIP', 99)">Купить</button>
+<div class="container">
+    <h2>Донат</h2>
+
+    <div class="donates">
+        <div class="card">
+            <h2>VIP</h2>
+            <div class="price">99 ₽</div>
+            <button onclick="buyDonate('VIP', 99)">Купить</button>
+        </div>
+
+        <div class="card">
+            <h2>Админ</h2>
+            <div class="price">499 ₽</div>
+            <button onclick="buyDonate('Админ', 499)">Купить</button>
+        </div>
+
+        <div class="card">
+            <h2>Господин</h2>
+            <div class="price">999 ₽</div>
+            <button onclick="buyDonate('Господин', 999)">Купить</button>
+        </div>
+
+        <div class="card">
+            <h2>Владелец</h2>
+            <div class="price">4999 ₽</div>
+            <button onclick="buyDonate('Владелец', 4999)">Купить</button>
+        </div>
     </div>
+</div>
 
-    <div class="card">
-        <h2>Админ</h2>
-        <p>499 ₽</p>
-        <button onclick="buyDonate('Админ', 499)">Купить</button>
-    </div>
+<footer>
+    © 2026 Crafted Legends
+</footer>
 
-    <div class="card">
-        <h2>Господин</h2>
-        <p>999 ₽</p>
-        <button onclick="buyDonate('Господин', 999)">Купить</button>
-    </div>
-
-    <div class="card">
-        <h2>Владелец</h2>
-        <p>4999 ₽</p>
-        <button onclick="buyDonate('Владелец', 4999)">Купить</button>
-    </div>
-
-    <script>
-        function buyDonate(name, price) {
-            const nick = prompt("Введите ваш ник в Minecraft:");
-            if (!nick) {
-                alert("Ник не введён");
-                return;
-            }
-
-            alert(
-                "Вы выбрали донат: " + name +
-                "\nЦена: " + price + " ₽" +
-                "\nНик: " + nick
-            );
+<script>
+    function buyDonate(name, price) {
+        const nick = prompt("Введите ваш ник в Minecraft:");
+        if (!nick) {
+            alert("Ник не введён");
+            return;
         }
-    </script>
+
+        alert(
+            "Донат: " + name +
+            "\nЦена: " + price + " ₽" +
+            "\nНик: " + nick +
+            "\n\nОплата будет добавлена позже"
+        );
+    }
+</script>
 
 </body>
 </html>
+
 
 
 

@@ -4,80 +4,100 @@
     <meta charset="UTF-8">
     <title>Crafted Legends — Minecraft сервер</title>
 
-    <meta name="description" content="Crafted Legends — Minecraft сервер с донатом. VIP, Админ, Господин, Владелец.">
+    <meta name="description" content="Crafted Legends — Minecraft сервер с донатом. Тут ты найдешь новых друзей и добрую администрацию!.">
 
     <style>
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            background: #0f172a;
-            color: #e5e7eb;
+            background: #0b0b0b;
+            color: #ffffff;
         }
 
         header {
-            background: linear-gradient(90deg, #22c55e, #16a34a);
-            padding: 30px;
+            background: linear-gradient(90deg, #ff8c00, #ff4500);
+            padding: 40px 20px;
             text-align: center;
         }
 
         header h1 {
             margin: 0;
-            font-size: 42px;
+            font-size: 44px;
+            letter-spacing: 2px;
         }
 
         header p {
             margin-top: 10px;
             font-size: 18px;
+            opacity: 0.9;
         }
 
         .container {
-            max-width: 1000px;
-            margin: 40px auto;
+            max-width: 1100px;
+            margin: 50px auto;
             padding: 0 20px;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 32px;
+            margin-bottom: 40px;
         }
 
         .donates {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 20px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 25px;
         }
 
         .card {
-            background: #1e293b;
-            padding: 20px;
-            border-radius: 12px;
+            background: #111111;
+            border-radius: 14px;
+            padding: 25px;
             text-align: center;
-            box-shadow: 0 10px 20px rgba(0,0,0,0.3);
+            box-shadow: 0 0 20px rgba(255, 140, 0, 0.15);
+            transition: transform 0.3s, box-shadow 0.3s;
         }
 
-        .card h2 {
+        .card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 0 30px rgba(255, 140, 0, 0.35);
+        }
+
+        .card h3 {
             margin-top: 0;
+            font-size: 24px;
         }
 
         .price {
-            font-size: 26px;
-            margin: 15px 0;
-            color: #22c55e;
+            font-size: 28px;
+            margin: 20px 0;
+            color: #ff8c00;
+            font-weight: bold;
         }
 
-        button {
-            background: #22c55e;
+        .card button {
+            background: linear-gradient(90deg, #ff8c00, #ff4500);
             border: none;
-            padding: 12px;
+            padding: 14px;
             width: 100%;
-            border-radius: 8px;
+            border-radius: 10px;
             font-size: 16px;
+            color: #ffffff;
             cursor: pointer;
+            transition: opacity 0.3s, transform 0.2s;
         }
 
-        button:hover {
-            background: #16a34a;
+        .card button:hover {
+            opacity: 0.9;
+            transform: scale(1.05);
         }
 
         footer {
             text-align: center;
-            padding: 20px;
-            color: #94a3b8;
+            padding: 25px;
+            color: #aaaaaa;
+            font-size: 14px;
         }
     </style>
 </head>
@@ -90,29 +110,29 @@
 </header>
 
 <div class="container">
-    <h2>Донат</h2>
+    <h2 class="section-title">Привилегии</h2>
 
     <div class="donates">
         <div class="card">
-            <h2>VIP</h2>
+            <h3>VIP</h3>
             <div class="price">99 ₽</div>
             <button onclick="buyDonate('VIP', 99)">Купить</button>
         </div>
 
         <div class="card">
-            <h2>Админ</h2>
+            <h3>Админ</h3>
             <div class="price">499 ₽</div>
             <button onclick="buyDonate('Админ', 499)">Купить</button>
         </div>
 
         <div class="card">
-            <h2>Господин</h2>
+            <h3>Господин</h3>
             <div class="price">999 ₽</div>
             <button onclick="buyDonate('Господин', 999)">Купить</button>
         </div>
 
         <div class="card">
-            <h2>Владелец</h2>
+            <h3>Владелец</h3>
             <div class="price">4999 ₽</div>
             <button onclick="buyDonate('Владелец', 4999)">Купить</button>
         </div>
@@ -120,7 +140,7 @@
 </div>
 
 <footer>
-    © 2026 Crafted Legends
+    © 2026 Crafted Legends • Все права защищены
 </footer>
 
 <script>
@@ -135,13 +155,14 @@
             "Донат: " + name +
             "\nЦена: " + price + " ₽" +
             "\nНик: " + nick +
-            "\n\nОплата будет добавлена позже"
+            "\n\nОплата будет подключена позже"
         );
     }
 </script>
 
 </body>
 </html>
+
 
 
 

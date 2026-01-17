@@ -153,6 +153,23 @@ footer {
     header h1 {
         font-size: 32px;
     }
+}.
+    features{
+    list-style: none;
+    padding: 0;
+    margin: 15px 0;
+    text-align: left;
+    font-size: 14px;
+}
+
+.features li {
+    margin: 6px 0;
+    color: #fff;
+}
+
+.features li::before {
+    content: "★ ";
+    color: #ff8c00;
 }
 </style>
 </head>
@@ -168,30 +185,54 @@ footer {
     <h2 class="section-title">Привилегии</h2>
 
     <div class="donates">
-        <div class="card">
-            <h3>VIP</h3>
-            <div class="price">99 ₽</div>
-            <button onclick="openModal('VIP', 99)">Купить</button>
-        </div>
+    <div class="donates">
 
-        <div class="card">
-            <h3>Админ</h3>
-            <div class="price">499 ₽</div>
-            <button onclick="openModal('Админ', 499)">Купить</button>
-        </div>
-
-        <div class="card">
-            <h3>Господин</h3>
-            <div class="price">999 ₽</div>
-            <button onclick="openModal('Господин', 999)">Купить</button>
-        </div>
-
-        <div class="card">
-            <h3>Владелец</h3>
-            <div class="price">4999 ₽</div>
-            <button onclick="openModal('Владелец', 4999)">Купить</button>
-        </div>
+    <div class="card">
+        <h3>VIP</h3>
+        <ul class="features">
+            <li>✔ Цветной ник</li>
+            <li>✔ /kit vip</li>
+            <li>✔ Префикс [VIP]</li>
+        </ul>
+        <div class="price">99 ₽</div>
+        <button onclick="openModal('VIP', 99)">Купить</button>
     </div>
+
+    <div class="card">
+        <h3>Админ</h3>
+        <ul class="features">
+            <li>✔ Все возможности VIP</li>
+            <li>✔ Ты получишь кит с ресурсами</li>
+            <li>✔ Особый префикс</li>
+        </ul>
+        <div class="price">499 ₽</div>
+        <button onclick="openModal('Админ', 499)">Купить</button>
+    </div>
+
+    <div class="card">
+        <h3>Господин</h3>
+        <ul class="features">
+            <li>✔ Все возможности Админа</li>
+            <li>✔ /heal</li>
+            <li>✔ /feed</li>
+            <li>✔ Особый префикс</li>
+        </ul>
+        <div class="price">999 ₽</div>
+        <button onclick="openModal('Господин', 999)">Купить</button>
+    </div>
+
+    <div class="card">
+        <h3>Владелец</h3>
+        <ul class="features">
+            <li>✔ Все возможности Господина</li>
+            <li>✔ Ты сможешь летать</li>
+            <li>✔ Особый кит с крутыми ресурсами</li>
+            <li>✔ Особый префикс</li>
+        </ul>
+        <div class="price">4999 ₽</div>
+        <button onclick="openModal('Владелец', 4999)">Купить</button>
+    </div>
+
 </div>
 
 <footer>
@@ -246,6 +287,7 @@ function confirmBuy() {
 
 </body>
 </html>
+
 
 
 

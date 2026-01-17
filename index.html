@@ -171,6 +171,21 @@ footer {
     content: "★ ";
     color: #ff8c00;
 }
+    /* АНИМАЦИЯ ИКОНОК БЕЗ SPAN */
+.features li {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.features li:hover {
+    transform: translateX(6px);
+    color: #ff8c00;
+}
+
+/* анимация для первого символа (эмодзи) */
+.features li:hover::first-letter {
+    transform: scale(1.2) rotate(-10deg);
+    display: inline-block;
+}
 </style>
 </head>
 
@@ -287,6 +302,7 @@ function confirmBuy() {
 
 </body>
 </html>
+
 
 
 

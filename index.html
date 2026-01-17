@@ -6,7 +6,7 @@
 
 <title>Crafted Legends — Minecraft сервер</title>
 <meta name="description" content="Crafted Legends — Minecraft сервер с донатом. VIP, Админ, Господин, Владелец.">
-
+    
 <style>
 body {
     margin: 0;
@@ -185,6 +185,36 @@ footer {
 .features li:hover::first-letter {
     transform: scale(1.2) rotate(-10deg);
     display: inline-block;
+}/* ЛУЧШАЯ ПРИВИЛЕГИЯ */
+.card.best {
+    position: relative;
+    border: 2px solid #ff8c00;
+    box-shadow: 0 0 40px rgba(255,140,0,0.5);
+    transform: scale(1.03);
+}
+
+.card.best::before {
+    content: "⭐ Топ выбор";
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    background: linear-gradient(90deg, #ff8c00, #ff4500);
+    color: white;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* лёгкая пульсация */
+.card.best {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 20px rgba(255,140,0,0.4); }
+    50% { box-shadow: 0 0 40px rgba(255,140,0,0.7); }
+    100% { box-shadow: 0 0 20px rgba(255,140,0,0.4); }
 }
 </style>
 </head>
@@ -236,7 +266,7 @@ footer {
         <button onclick="openModal('Господин', 999)">Купить</button>
     </div>
 
-    <div class="card">
+    <div class="card best">
         <h3>Владелец</h3>
         <ul class="features">
             <li>✔ Все возможности Господина</li>
@@ -302,6 +332,7 @@ function confirmBuy() {
 
 </body>
 </html>
+
 
 
 
